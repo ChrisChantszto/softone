@@ -1,0 +1,29 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-softone-dev-223913-authRole",
+      "UnauthRoleArn": "arn:aws:iam::133138822185:role/amplify-softone-dev-223913-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::133138822185:role/amplify-softone-dev-223913-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-softone-dev-223913-deployment",
+      "UnauthRoleName": "amplify-softone-dev-223913-unauthRole",
+      "StackName": "amplify-softone-dev-223913",
+      "StackId": "arn:aws:cloudformation:eu-west-2:133138822185:stack/amplify-softone-dev-223913/4327aa80-7cb2-11ee-bade-0654deb68440",
+      "AmplifyAppId": "d1nhc1rlk4dwml"
+    },
+    "categories": {
+      "auth": {
+        "softone56a1a032": {}
+      },
+      "function": {
+        "S3Triggerfc24e046": {
+          "deploymentBucketName": "amplify-softone-dev-223913-deployment",
+          "s3Key": "amplify-builds/S3Triggerfc24e046-77336661474f46526f71-build.zip"
+        }
+      },
+      "storage": {
+        "s3b1334078": {}
+      }
+    }
+  }
+}
