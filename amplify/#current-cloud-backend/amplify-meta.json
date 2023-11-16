@@ -1,0 +1,111 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-softone-dev-223913-authRole",
+      "UnauthRoleArn": "arn:aws:iam::133138822185:role/amplify-softone-dev-223913-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::133138822185:role/amplify-softone-dev-223913-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-softone-dev-223913-deployment",
+      "UnauthRoleName": "amplify-softone-dev-223913-unauthRole",
+      "StackName": "amplify-softone-dev-223913",
+      "StackId": "arn:aws:cloudformation:eu-west-2:133138822185:stack/amplify-softone-dev-223913/4327aa80-7cb2-11ee-bade-0654deb68440",
+      "AmplifyAppId": "d1nhc1rlk4dwml"
+    }
+  },
+  "auth": {
+    "softone56a1a032": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-softone-dev-223913-deployment/amplify-cfn-templates/auth/softone56a1a032-cloudformation-template.json",
+        "logicalId": "authsoftone56a1a032"
+      },
+      "lastPushTimeStamp": "2023-11-06T17:31:42.267Z",
+      "output": {
+        "UserPoolId": "eu-west-2_aXtORurwJ",
+        "AppClientIDWeb": "6td78vo6btogkc3g5teg2g8fn0",
+        "AppClientID": "17f0jfhb5lqtd9gm8t216u7gbq",
+        "IdentityPoolId": "eu-west-2:5cafc236-8d97-4628-85d9-ef57b7e0570a",
+        "UserPoolArn": "arn:aws:cognito-idp:eu-west-2:133138822185:userpool/eu-west-2_aXtORurwJ",
+        "IdentityPoolName": "softone56a1a032_identitypool_56a1a032__dev",
+        "UserPoolName": "softone56a1a032_userpool_56a1a032"
+      },
+      "lastPushDirHash": "YoxP5YOnrHV1aOS4lHy8FGy3n+M="
+    }
+  },
+  "function": {
+    "S3Triggerfc24e046": {
+      "service": "Lambda",
+      "providerPlugin": "awscloudformation",
+      "build": true,
+      "lastBuildTimeStamp": "2023-11-06T17:28:47.422Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2023-11-06T17:28:47.461Z",
+      "distZipFilename": "S3Triggerfc24e046-77336661474f46526f71-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-softone-dev-223913-deployment",
+        "s3Key": "amplify-builds/S3Triggerfc24e046-77336661474f46526f71-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-softone-dev-223913-deployment/amplify-cfn-templates/function/S3Triggerfc24e046-cloudformation-template.json",
+        "logicalId": "functionS3Triggerfc24e046"
+      },
+      "lastPushTimeStamp": "2023-11-06T17:31:42.267Z",
+      "output": {
+        "LambdaExecutionRoleArn": "arn:aws:iam::133138822185:role/S3Triggerfc24e046LambdaRolefc24e046-dev",
+        "Region": "eu-west-2",
+        "Arn": "arn:aws:lambda:eu-west-2:133138822185:function:S3Triggerfc24e046-dev",
+        "Name": "S3Triggerfc24e046-dev",
+        "LambdaExecutionRole": "S3Triggerfc24e046LambdaRolefc24e046-dev"
+      },
+      "lastPushDirHash": "97rUrt5w3ntWBEe7BcHRkqEF6K4="
+    }
+  },
+  "storage": {
+    "s3b1334078": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "S3Triggerfc24e046",
+          "attributes": [
+            "Name",
+            "Arn",
+            "LambdaExecutionRole"
+          ]
+        }
+      ],
+      "lastPushTimeStamp": "2023-11-06T17:31:42.267Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-softone-dev-223913-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "logicalId": "storages3b1334078"
+      },
+      "output": {
+        "BucketName": "amplify-d37suftuymwxwf-staging861a07e7144f409db223913-dev",
+        "Region": "eu-west-2"
+      },
+      "lastPushDirHash": "MrlYDCNxlhuCXoOy9SYlQ1LWe6I="
+    }
+  }
+}
